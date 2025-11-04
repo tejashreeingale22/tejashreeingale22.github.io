@@ -1,22 +1,165 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        .center { text-align: center; }
-    </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Tejashree Ingale — Resume</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --text:#e6eef6;
+      --maxw:900px;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background: linear-gradient(180deg,#071028 0%, #071829 100%);
+      color:var(--text);
+      margin:24px;
+      display:flex;
+      justify-content:center;
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .avatar{
+      width:84px;
+      height:84px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent), #7c3aed);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:28px;
+      color:#02111a;
+      box-shadow: 0 6px 18px rgba(3,7,18,0.6);
+    }
+    h1{margin:0;font-size:20px;}
+    .sub{color:var(--muted);font-size:13px;margin-top:4px}
+    .contact{margin-left:auto;text-align:right;font-size:13px;color:var(--muted)}
+    .contact a{color:var(--accent);text-decoration:none}
+    section{margin-top:14px}
+    h2{font-size:14px;margin:0 0 8px 0;color:#cfeef6}
+    p.lead{margin:0;color:var(--muted);line-height:1.45}
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 12px;
+      margin-top:8px;
+    }
+    .skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+    }
+    .card{
+      background:rgba(255,255,255,0.02);
+      padding:16px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    ul{margin:8px 0 0 18px;line-height:1.45}
+    li{margin-bottom:8px;font-size:14px}
+    .meta{font-size:13px;color:var(--muted)}
+    footer{margin-top:16px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){
+      .two-col{grid-template-columns:1fr; }
+      .contact{text-align:left;margin-top:8px}
+    }
+  </style>
 </head>
 <body>
-    <h1 class="center">Hi, I'm Tejashree 👋</h1>
-    <p>Welcome to my portfolio! I’m a System Validation Engineer skilled in DDR5, CXL, Python Automation & SoC Debug.</p>
+  <div class="container" role="main">
+    <header>
+      <div class="avatar">TI</div>
+      <div>
+        <h1>Tejashree Ingale</h1>
+        <div class="sub">System Validation Engineer — DDR5 | CXL | Python Automation | SoC Debug</div>
+        <div class="meta">Bangalore, India</div>
+      </div>
+      <div class="contact">
+        <div>+91-9702849511</div>
+        <div><a href="mailto:tejashreeingale22@gmail.com">tejashreeingale22@gmail.com</a></div>
+        <div><a href="https://www.linkedin.com/in/tejashree-ramesh-ingale-6a75771a6/" target="_blank">linkedin.com/in/tejashree-ramesh-ingale-6a75771a6</a></div>
+      </div>
+    </header>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>Project 1 - Coming soon!</li>
-    </ul>
+    <section class="card">
+      <h2>Professional Summary</h2>
+      <p class="lead">Results-driven System Validation Engineer with 3+ years of experience at Intel in post-silicon validation, memory subsystem testing (DDR5, HBM, CXL) and Python automation. Proven track record in defining validation strategy, accelerating silicon bring-up, and improving cross-team debug efficiency.</p>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
+    <div class="two-col">
+      <div>
+        <section class="card">
+          <h2>Experience</h2>
+          <div class="meta">Intel India Technology Pvt. Ltd. — System Validation Engineer (Jan 2021 – Oct 2023)</div>
+          <ul>
+            <li><strong>Led validation planning</strong> with architects and BIOS teams for Intel Xeon platforms, improving requirement alignment and reducing redesign iterations by ~20%.</li>
+            <li><strong>Expanded memory subsystem coverage</strong> (DDR5, HBM, CXL), enabling ~30% more feature interaction issues to be found pre-silicon and reducing customer-facing escapes.</li>
+            <li><strong>Designed Python-based automation</strong> for stress, load, and regression workloads, reducing manual test execution by ~40% and accelerating feature enablement.</li>
+            <li><strong>Developed performance monitoring & behavioral checks</strong>, enabling early bottleneck detection and improving post-silicon debug efficiency.</li>
+            <li><strong>Automated DIMM configuration validation</strong> using Excel–Python tooling, cutting setup time by ~50% and eliminating recurring population errors.</li>
+            <li><strong>Automated HPCG benchmarking</strong> via Intel oneAPI with ~80% memory utilization to capture accurate performance indicators under high load.</li>
+            <li><strong>Executed validation</strong> across memory configurations up to 512GB, ensuring stable feature enablement and reducing late-stage performance issues.</li>
+            <li><strong>Streamlined defect workflows</strong> with HSD/JIRA, improving debug turnaround by ~25% and accelerating root-cause resolution across firmware and BIOS.</li>
+          </ul>
+        </section>
+
+        <section class="card" style="margin-top:16px;">
+          <h2>Education</h2>
+          <div class="meta">Birla Institute of Technology and Science (BITS Pilani) — M.S. Communication Engineering (Aug 2019 – May 2021)</div>
+          <div class="meta" style="margin-top:8px;">A.C. Patil College of Engineering — B.E. Electronics & Telecommunication (Aug 2013 – May 2017)</div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h2>Technical Skills</h2>
+          <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">DDR5 / HBM / CXL</div>
+            <div class="skill">SoC Validation</div>
+            <div class="skill">Test Automation</div>
+            <div class="skill">oneAPI / HPCG</div>
+            <div class="skill">Phoenix / NGA</div>
+            <div class="skill">HSD / JIRA</div>
+            <div class="skill">Docker / Jenkins</div>
+            <div class="skill">Linux / Windows</div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px;">
+          <h2>Highlights</h2>
+          <ul>
+            <li>Post-silicon validation & debug for Xeon-class platforms</li>
+            <li>Memory config automation & HPCG workload orchestration</li>
+            <li>Cross-functional collaboration with Architecture, BIOS & Firmware</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    
+  </div>
 </body>
 </html>
